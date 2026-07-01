@@ -3,54 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mkheyan Agency | Digital vCard</title>
+    <title>Vazgen Mkheyan | Mkheyan Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body { background: #050505; color: white; font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+        }
+        .btn-hover:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen p-4">
+<body class="flex items-center justify-center min-h-screen p-6">
 
-    <div class="w-full max-w-sm space-y-6">
+    <div class="w-full max-w-sm space-y-8">
         
-        <!-- Profile Header -->
-        <div class="text-center space-y-2">
-            <div class="w-24 h-24 mx-auto rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                <i data-lucide="code-2" class="w-10 h-10 text-white"></i>
+        <!-- Header & Logo Section -->
+        <div class="text-center space-y-4">
+            <!-- Այստեղ կարող ես դնել քո լոգոյի պատկերը -->
+            <div class="w-20 h-20 mx-auto rounded-2xl glass-card flex items-center justify-center border border-white/10">
+                <i data-lucide="zap" class="w-8 h-8 text-white"></i>
             </div>
-            <h1 class="text-2xl font-bold tracking-tight">Vazgen Mkheyan</h1>
-            <p class="text-gray-400 text-sm">Founder & Full-Stack Developer</p>
+            <div>
+                <h1 class="text-xl font-bold tracking-tight">Vazgen Mkheyan</h1>
+                <p class="text-xs text-gray-500 uppercase tracking-[0.2em] mt-1">Mkheyan Agency</p>
+            </div>
         </div>
 
-        <!-- Links Grid -->
+        <!-- Links Section -->
         <div class="space-y-3">
-            <a href="https://t.me/vazgenmkheyan" class="glass p-4 rounded-2xl flex items-center justify-between hover:bg-white/10 transition">
-                <span>Telegram</span>
-                <i data-lucide="send" class="w-4 h-4"></i>
+            <a href="https://mkheyan.agency" target="_blank" class="glass-card p-4 rounded-2xl flex items-center justify-between btn-hover transition duration-300">
+                <span class="font-medium text-sm">Website</span>
+                <i data-lucide="globe" class="w-4 h-4 text-gray-400"></i>
             </a>
-            <a href="https://instagram.com/mkheyan.agency" class="glass p-4 rounded-2xl flex items-center justify-between hover:bg-white/10 transition">
-                <span>Instagram</span>
-                <i data-lucide="instagram" class="w-4 h-4"></i>
+            <a href="https://t.me/vazgenmkheyan" target="_blank" class="glass-card p-4 rounded-2xl flex items-center justify-between btn-hover transition duration-300">
+                <span class="font-medium text-sm">Telegram</span>
+                <i data-lucide="send" class="w-4 h-4 text-gray-400"></i>
             </a>
-            <a href="https://mkheyan.agency" class="glass p-4 rounded-2xl flex items-center justify-between hover:bg-white/10 transition">
-                <span>Website</span>
-                <i data-lucide="globe" class="w-4 h-4"></i>
+            <a href="https://instagram.com/mkheyan.agency" target="_blank" class="glass-card p-4 rounded-2xl flex items-center justify-between btn-hover transition duration-300">
+                <span class="font-medium text-sm">Instagram</span>
+                <i data-lucide="instagram" class="w-4 h-4 text-gray-400"></i>
             </a>
-            <a href="mailto:info@mkheyan.agency" class="glass p-4 rounded-2xl flex items-center justify-between hover:bg-white/10 transition">
-                <span>Email</span>
-                <i data-lucide="mail" class="w-4 h-4"></i>
+            <a href="mailto:info@mkheyan.agency" class="glass-card p-4 rounded-2xl flex items-center justify-between btn-hover transition duration-300">
+                <span class="font-medium text-sm">Email</span>
+                <i data-lucide="mail" class="w-4 h-4 text-gray-400"></i>
             </a>
         </div>
 
         <!-- Footer -->
-        <div class="pt-8 text-center">
-            <p class="text-[10px] uppercase tracking-[0.2em] text-gray-500">Mkheyan Agency © 2026</p>
+        <div class="text-center pt-4">
+            <p class="text-[10px] text-gray-600 uppercase tracking-widest">Digital Solutions © 2026</p>
         </div>
     </div>
 
     <script>
+        // Lucide իկոնների ակտիվացում
         lucide.createIcons();
     </script>
 </body>
