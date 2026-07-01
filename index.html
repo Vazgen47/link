@@ -3,63 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vazgen Mkheyan | Mkheyan Agency</title>
+    <title>Mkheyan Agency | Digital vCard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = { darkMode: 'media' }
+    </script>
     <style>
-        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
-        .glass-card { 
-            background: rgba(255, 255, 255, 0.03); 
+        body { transition: background 0.3s ease; }
+        .glass { 
+            background: rgba(255, 255, 255, 0.05); 
             backdrop-filter: blur(12px); 
-            border: 1px solid rgba(255, 255, 255, 0.08); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
         }
-        .btn-hover:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); }
+        @media (prefers-color-scheme: light) {
+            body { background: #f9f9f9; color: #050505; }
+            .glass { background: rgba(0, 0, 0, 0.03); border: 1px solid rgba(0, 0, 0, 0.1); }
+        }
+        @media (prefers-color-scheme: dark) {
+            body { background: #050505; color: #ffffff; }
+        }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen p-6">
+<body class="min-h-screen flex items-center justify-center p-4">
 
-    <div class="w-full max-w-sm space-y-8">
+    <div class="w-full max-w-sm space-y-6">
         
-        <!-- Header & Logo Section -->
-        <div class="text-center space-y-4">
-            <!-- Այստեղ կարող ես դնել քո լոգոյի պատկերը -->
-            <div class="w-20 h-20 mx-auto rounded-2xl glass-card flex items-center justify-center border border-white/10">
-                <i data-lucide="zap" class="w-8 h-8 text-white"></i>
+        <!-- Header -->
+        <div class="text-center space-y-2">
+            <div class="w-20 h-20 mx-auto rounded-2xl glass flex items-center justify-center">
+                <i data-lucide="zap" class="w-8 h-8"></i>
             </div>
-            <div>
-                <h1 class="text-xl font-bold tracking-tight">Vazgen Mkheyan</h1>
-                <p class="text-xs text-gray-500 uppercase tracking-[0.2em] mt-1">Mkheyan Agency</p>
-            </div>
+            <h1 class="text-xl font-bold">Vazgen Mkheyan</h1>
+            <p class="text-xs opacity-60 uppercase tracking-widest">Mkheyan Agency</p>
         </div>
 
-        <!-- Links Section -->
+        <!-- Links -->
         <div class="space-y-3">
-            <a href="https://mkheyan.agency" target="_blank" class="glass-card p-4 rounded-2xl flex items-center justify-between btn-hover transition duration-300">
-                <span class="font-medium text-sm">Website</span>
-                <i data-lucide="globe" class="w-4 h-4 text-gray-400"></i>
+            <a href="https://mkheyan.agency" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
+                <span>mkheyan.agency</span>
+                <i data-lucide="globe" class="w-4 h-4"></i>
             </a>
-            <a href="https://t.me/vazgenmkheyan" target="_blank" class="glass-card p-4 rounded-2xl flex items-center justify-between btn-hover transition duration-300">
-                <span class="font-medium text-sm">Telegram</span>
-                <i data-lucide="send" class="w-4 h-4 text-gray-400"></i>
+            <a href="https://t.me/MkheyanAgencyNews" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
+                <span>@MkheyanAgencyNews</span>
+                <i data-lucide="newspaper" class="w-4 h-4"></i>
             </a>
-            <a href="https://instagram.com/mkheyan.agency" target="_blank" class="glass-card p-4 rounded-2xl flex items-center justify-between btn-hover transition duration-300">
-                <span class="font-medium text-sm">Instagram</span>
-                <i data-lucide="instagram" class="w-4 h-4 text-gray-400"></i>
+            <a href="https://t.me/MkheyanAgencySupport" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
+                <span>@MkheyanAgencySupport</span>
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
             </a>
-            <a href="mailto:info@mkheyan.agency" class="glass-card p-4 rounded-2xl flex items-center justify-between btn-hover transition duration-300">
-                <span class="font-medium text-sm">Email</span>
-                <i data-lucide="mail" class="w-4 h-4 text-gray-400"></i>
+            <a href="https://wa.me/message/QRM33NSCYND2C1" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
+                <span>WhatsApp</span>
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.instagram.com/mkheyan.agency/" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
+                <span>Instagram</span>
+                <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.threads.com/@mkheyan.agency" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
+                <span>Threads</span>
+                <i data-lucide="at-sign" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.facebook.com/mkheyan.agency" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
+                <span>Facebook</span>
+                <i data-lucide="facebook" class="w-4 h-4"></i>
             </a>
         </div>
 
-        <!-- Footer -->
-        <div class="text-center pt-4">
-            <p class="text-[10px] text-gray-600 uppercase tracking-widest">Digital Solutions © 2026</p>
-        </div>
     </div>
 
     <script>
-        // Lucide իկոնների ակտիվացում
         lucide.createIcons();
     </script>
 </body>
