@@ -22,32 +22,26 @@ background:#050505;
 color:white;
 }
 
-
 .glass{
 background:rgba(255,255,255,.04);
 backdrop-filter:blur(20px);
 border:1px solid rgba(255,255,255,.1);
 }
 
-
 .hover-lift{
 transition:.35s ease;
 }
-
 
 .hover-lift:hover{
 transform:translateY(-5px);
 background:rgba(255,255,255,.08);
 }
 
-
 .fade{
 animation:fade 1s ease;
 }
 
-
 @keyframes fade{
-
 from{
 opacity:0;
 transform:translateY(20px);
@@ -57,7 +51,6 @@ to{
 opacity:1;
 transform:translateY(0);
 }
-
 }
 
 </style>
@@ -75,7 +68,8 @@ website:"Կայք",
 location:"Հայաստան • Ամբողջ աշխարհ",
 share:"Կիսվել",
 save:"Պահպանել",
-  siteTitle:"MKHEYAN AGENCY Կայք",
+
+siteTitle:"MKHEYAN AGENCY Կայք",
 siteStatus:"Նոր կայքը շուտով պատրաստ կլինի",
 siteText:"Մեր նոր պրեմիում կայքը շուտով պատրաստ կլինի 🚀",
 visit:"Այցելել կայք"
@@ -90,7 +84,8 @@ website:"Website",
 location:"Armenia • Worldwide",
 share:"Share",
 save:"Save",
-  siteTitle:"MKHEYAN AGENCY Website",
+
+siteTitle:"MKHEYAN AGENCY Website",
 siteStatus:"New website is coming soon",
 siteText:"Our new premium website will be ready soon 🚀",
 visit:"Visit Website"
@@ -105,7 +100,8 @@ website:"Сайт",
 location:"Армения • Весь мир",
 share:"Поделиться",
 save:"Сохранить",
-  siteTitle:"Сайт MKHEYAN AGENCY",
+
+siteTitle:"Сайт MKHEYAN AGENCY",
 siteStatus:"Новый сайт скоро будет готов",
 siteText:"Наш новый премиальный сайт скоро будет готов 🚀",
 visit:"Открыть сайт"
@@ -120,28 +116,22 @@ function changeLanguage(lang){
 let t=translations[lang];
 
 brandTitle.innerHTML=t.title;
-
 emailText.innerHTML=t.email;
-
 phoneText.innerHTML=t.phone;
-
 websiteText.innerHTML=t.website;
-
 locationText.innerHTML=t.location;
 
 shareText.innerHTML=t.share;
-
 saveText.innerHTML=t.save;
-  siteTitle.innerHTML=t.siteTitle;
+
+siteTitle.innerHTML=t.siteTitle;
 siteStatus.innerHTML=t.siteStatus;
 siteText.innerHTML=t.siteText;
 visitText.innerHTML=t.visit;
 
 }
 
-
 </script>
-
 
 </head>
 
@@ -152,6 +142,7 @@ visitText.innerHTML=t.visit;
 <div class="max-w-md w-full space-y-6 fade">
 
 
+<!-- HEADER -->
 
 <div class="text-center space-y-5">
 
@@ -181,20 +172,17 @@ Web Development • Branding • Digital Solutions
 <div class="flex justify-center gap-2">
 
 
-<button onclick="changeLanguage('hy')" 
-class="glass px-4 py-2 rounded-xl text-xs">
+<button onclick="changeLanguage('hy')" class="glass px-4 py-2 rounded-xl text-xs">
 HY
 </button>
 
 
-<button onclick="changeLanguage('en')" 
-class="glass px-4 py-2 rounded-xl text-xs">
+<button onclick="changeLanguage('en')" class="glass px-4 py-2 rounded-xl text-xs">
 ENG
 </button>
 
 
-<button onclick="changeLanguage('ru')" 
-class="glass px-4 py-2 rounded-xl text-xs">
+<button onclick="changeLanguage('ru')" class="glass px-4 py-2 rounded-xl text-xs">
 RU
 </button>
 
@@ -206,10 +194,10 @@ RU
 
 
 
+<!-- CONTACT -->
 
 
 <div class="space-y-3">
-
 
 
 <a href="mailto:mkheyan.agency@gmail.com"
@@ -225,10 +213,8 @@ Email
 
 
 
-
 <a href="tel:+37477430886"
 class="glass p-4 rounded-2xl flex justify-between items-center hover-lift">
-
 
 <span id="phoneText">
 Phone
@@ -240,10 +226,8 @@ Phone
 
 
 
-
 <a href="https://mkheyan.agency"
 class="glass p-4 rounded-2xl flex justify-between items-center hover-lift">
-
 
 <span id="websiteText">
 Website
@@ -255,23 +239,14 @@ Website
 
 
 
-
 <div class="glass p-4 rounded-2xl flex justify-between items-center text-emerald-400">
-
 
 <span id="locationText">
 Armenia • Worldwide
 </span>
 
-
 <i data-lucide="map-pin"></i>
 
-
-</div>
-
-
-
-
 </div>
 
 
@@ -279,9 +254,10 @@ Armenia • Worldwide
 
 
 
-<!-- Website Preview Section -->
+<!-- WEBSITE UPDATE -->
 
-<div class="glass rounded-3xl p-5 space-y-4 mt-5">
+
+<div class="glass rounded-3xl p-5 space-y-4">
 
 
 <div class="flex items-center gap-4">
@@ -289,16 +265,22 @@ Armenia • Worldwide
 
 <div class="w-14 h-14 rounded-2xl overflow-hidden glass">
 
-<img 
-src="photo_2026-02-12 17.56.23.jpeg"
-class="w-full h-full object-cover"
-/>
+<img src="photo_2026-02-12 17.56.23.jpeg"
+class="w-full h-full object-cover">
 
 </div>
 
 
 <div>
 
+<h2 id="siteTitle" class="font-bold">
+MKHEYAN AGENCY Website
+</h2>
+
+
+<p id="siteStatus" class="text-white/40 text-xs">
+New website is coming soon
+</p>
 
 
 </div>
@@ -313,9 +295,7 @@ class="w-full h-full object-cover"
 
 
 <p id="siteText" class="text-white/60 text-sm mb-3">
-
 Մեր նոր պրեմիում կայքը շուտով պատրաստ կլինի 🚀
-
 </p>
 
 
@@ -341,15 +321,12 @@ class="inline-flex items-center gap-2 bg-white text-black px-5 py-3 rounded-xl t
 </div>
 
 
-</div>
 
 
 
-
-
+<!-- SOCIAL -->
 
 <div class="grid grid-cols-4 gap-3">
-
 
 
 <a href="https://mkheyan.agency"
@@ -370,7 +347,6 @@ class="glass p-4 rounded-2xl flex justify-center hover-lift">
 
 
 
-
 <a href="https://instagram.com/mkheyan.agency"
 class="glass p-4 rounded-2xl flex justify-center hover-lift">
 
@@ -378,7 +354,6 @@ class="glass p-4 rounded-2xl flex justify-center hover-lift">
 class="w-6 h-6">
 
 </a>
-
 
 
 
@@ -395,7 +370,7 @@ class="w-6 h-6">
 
 
 
-
+<!-- BUTTONS -->
 
 
 <div class="grid grid-cols-2 gap-3">
@@ -404,32 +379,24 @@ class="w-6 h-6">
 <button onclick="shareCard()"
 class="bg-white text-black rounded-2xl p-4 font-bold flex justify-center items-center gap-2">
 
-
 <i data-lucide="share-2"></i>
-
 
 <span id="shareText">
 Share
 </span>
 
-
 </button>
-
-
 
 
 
 <button onclick="saveContact()"
 class="glass rounded-2xl p-4 font-bold flex justify-center items-center gap-2 hover-lift">
 
-
 <i data-lucide="building-2"></i>
-
 
 <span id="saveText">
 Save
 </span>
-
 
 </button>
 
@@ -438,24 +405,16 @@ Save
 
 
 
-
 <p class="text-center text-white/30 text-xs">
-
 © 2026 MKHEYAN AGENCY
-
 </p>
-
 
 
 </div>
 
 
 
-
-
-
 <script>
-
 
 lucide.createIcons();
 
@@ -479,9 +438,7 @@ url:window.location.href
 
 
 
-
 function saveContact(){
-
 
 const vcard=`BEGIN:VCARD
 VERSION:3.0
@@ -494,16 +451,9 @@ URL:https://mkheyan.agency
 END:VCARD`;
 
 
-
-const blob=new Blob(
-[vcard],
-{type:"text/vcard"}
-);
-
-
+const blob=new Blob([vcard],{type:"text/vcard"});
 
 const url=URL.createObjectURL(blob);
-
 
 const a=document.createElement("a");
 
@@ -513,10 +463,7 @@ a.download="MKHEYAN_AGENCY.vcf";
 
 a.click();
 
-
 }
-
-
 
 </script>
 
