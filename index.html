@@ -16,7 +16,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-
 body{
 font-family:'Inter',sans-serif;
 background:#050505;
@@ -64,12 +63,9 @@ transform:translateY(0);
 </style>
 
 
-
 <script>
 
-
 const translations={
-
 
 hy:{
 title:"Վեբ մշակում • Բրենդինգ • Թվային լուծումներ",
@@ -103,31 +99,27 @@ share:"Поделиться",
 save:"Сохранить"
 }
 
-
 };
 
 
 
 function changeLanguage(lang){
 
-
 let t=translations[lang];
 
+brandTitle.innerHTML=t.title;
 
-document.getElementById("brandTitle").innerHTML=t.title;
+emailText.innerHTML=t.email;
 
-document.getElementById("emailText").innerHTML=t.email;
+phoneText.innerHTML=t.phone;
 
-document.getElementById("phoneText").innerHTML=t.phone;
+websiteText.innerHTML=t.website;
 
-document.getElementById("websiteText").innerHTML=t.website;
+locationText.innerHTML=t.location;
 
-document.getElementById("locationText").innerHTML=t.location;
+shareText.innerHTML=t.share;
 
-document.getElementById("shareText").innerHTML=t.share;
-
-document.getElementById("saveText").innerHTML=t.save;
-
+saveText.innerHTML=t.save;
 
 }
 
@@ -136,7 +128,6 @@ document.getElementById("saveText").innerHTML=t.save;
 
 
 </head>
-
 
 
 <body class="min-h-screen flex items-center justify-center p-5">
@@ -157,11 +148,8 @@ class="w-full h-full object-cover">
 </div>
 
 
-
 <h1 class="text-3xl font-bold">
-
 MKHEYAN AGENCY
-
 </h1>
 
 
@@ -211,10 +199,8 @@ RU
 <a href="mailto:mkheyan.agency@gmail.com"
 class="glass p-4 rounded-2xl flex justify-between items-center hover-lift">
 
-
-<span>
+<span id="emailText">
 Email
-
 </span>
 
 <i data-lucide="mail"></i>
@@ -228,7 +214,7 @@ Email
 class="glass p-4 rounded-2xl flex justify-between items-center hover-lift">
 
 
-<span>
+<span id="phoneText">
 Phone
 </span>
 
@@ -243,7 +229,7 @@ Phone
 class="glass p-4 rounded-2xl flex justify-between items-center hover-lift">
 
 
-<span>
+<span id="websiteText">
 Website
 </span>
 
@@ -277,6 +263,7 @@ Armenia • Worldwide
 <div class="grid grid-cols-4 gap-3">
 
 
+
 <a href="https://mkheyan.agency"
 class="glass p-4 rounded-2xl flex justify-center hover-lift">
 
@@ -295,24 +282,29 @@ class="glass p-4 rounded-2xl flex justify-center hover-lift">
 
 
 
+
 <a href="https://instagram.com/mkheyan.agency"
 class="glass p-4 rounded-2xl flex justify-center hover-lift">
 
-<i data-lucide="instagram"></i>
+<img src="https://static.vecteezy.com/system/resources/thumbnails/065/386/519/small/instagram-letter-white-logo-icon-ig-app-transparent-background-premium-social-media-design-for-digital-download-free-png.png"
+class="w-6 h-6">
 
 </a>
+
 
 
 
 <a href="https://facebook.com/mkheyan.agency"
 class="glass p-4 rounded-2xl flex justify-center hover-lift">
 
-<i data-lucide="facebook"></i>
+<img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-app-round-white-icon.png"
+class="w-6 h-6">
 
 </a>
 
 
 </div>
+
 
 
 
@@ -324,13 +316,17 @@ class="glass p-4 rounded-2xl flex justify-center hover-lift">
 <button onclick="shareCard()"
 class="bg-white text-black rounded-2xl p-4 font-bold flex justify-center items-center gap-2">
 
+
 <i data-lucide="share-2"></i>
+
 
 <span id="shareText">
 Share
 </span>
 
+
 </button>
+
 
 
 
@@ -368,6 +364,8 @@ Save
 
 
 
+
+
 <script>
 
 
@@ -393,6 +391,7 @@ url:window.location.href
 
 
 
+
 function saveContact(){
 
 
@@ -407,10 +406,12 @@ URL:https://mkheyan.agency
 END:VCARD`;
 
 
+
 const blob=new Blob(
 [vcard],
 {type:"text/vcard"}
 );
+
 
 
 const url=URL.createObjectURL(blob);
