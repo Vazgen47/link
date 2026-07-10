@@ -48,7 +48,94 @@ body {
     }
 }
 </style>
+<script>
 
+const translations = {
+
+hy:{
+name:"MKHEYAN AGENCY",
+title:"Վեբ մշակում • Բրենդինգ • Թվային լուծումներ",
+email:"Էլ․ փոստ",
+phone:"Հեռախոս",
+website:"Կայք",
+location:"Հայաստան • Ամբողջ աշխարհ",
+share:"Կիսվել",
+save:"Պահպանել",
+footer:"© 2026 MKHEYAN AGENCY"
+},
+
+
+en:{
+name:"MKHEYAN AGENCY",
+title:"Web Development • Branding • Digital Solutions",
+email:"Email",
+phone:"Phone",
+website:"Website",
+location:"Armenia • Worldwide",
+share:"Share",
+save:"Save",
+footer:"© 2026 MKHEYAN AGENCY"
+},
+
+
+ru:{
+name:"MKHEYAN AGENCY",
+title:"Веб-разработка • Брендинг • Цифровые решения",
+email:"Эл. почта",
+phone:"Телефон",
+website:"Сайт",
+location:"Армения • Весь мир",
+share:"Поделиться",
+save:"Сохранить",
+footer:"© 2026 MKHEYAN AGENCY"
+}
+
+};
+
+
+
+function changeLanguage(lang){
+
+
+document.querySelector("#brandName").innerHTML =
+translations[lang].name;
+
+
+document.querySelector("#brandTitle").innerHTML =
+translations[lang].title;
+
+
+document.querySelector("#emailText").innerHTML =
+translations[lang].email;
+
+
+document.querySelector("#phoneText").innerHTML =
+translations[lang].phone;
+
+
+document.querySelector("#websiteText").innerHTML =
+translations[lang].website;
+
+
+document.querySelector("#locationText").innerHTML =
+translations[lang].location;
+
+
+document.querySelector("#shareText").innerHTML =
+translations[lang].share;
+
+
+document.querySelector("#saveText").innerHTML =
+translations[lang].save;
+
+
+document.querySelector("#footerText").innerHTML =
+translations[lang].footer;
+
+
+}
+
+</script>
 </head>
 
 <body class="min-h-screen flex items-center justify-center p-5">
