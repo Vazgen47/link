@@ -74,7 +74,11 @@ phone:"Հեռախոս",
 website:"Կայք",
 location:"Հայաստան • Ամբողջ աշխարհ",
 share:"Կիսվել",
-save:"Պահպանել"
+save:"Պահպանել",
+  siteTitle:"MKHEYAN AGENCY Կայք",
+siteStatus:"Նոր կայքը շուտով պատրաստ կլինի",
+siteText:"Մեր նոր պրեմիում կայքը շուտով պատրաստ կլինի 🚀",
+visit:"Այցելել կայք"
 },
 
 
@@ -85,7 +89,11 @@ phone:"Phone",
 website:"Website",
 location:"Armenia • Worldwide",
 share:"Share",
-save:"Save"
+save:"Save",
+  siteTitle:"MKHEYAN AGENCY Website",
+siteStatus:"New website is coming soon",
+siteText:"Our new premium website will be ready soon 🚀",
+visit:"Visit Website"
 },
 
 
@@ -96,7 +104,11 @@ phone:"Телефон",
 website:"Сайт",
 location:"Армения • Весь мир",
 share:"Поделиться",
-save:"Сохранить"
+save:"Сохранить",
+  siteTitle:"Сайт MKHEYAN AGENCY",
+siteStatus:"Новый сайт скоро будет готов",
+siteText:"Наш новый премиальный сайт скоро будет готов 🚀",
+visit:"Открыть сайт"
 }
 
 };
@@ -120,6 +132,10 @@ locationText.innerHTML=t.location;
 shareText.innerHTML=t.share;
 
 saveText.innerHTML=t.save;
+  siteTitle.innerHTML=t.siteTitle;
+siteStatus.innerHTML=t.siteStatus;
+siteText.innerHTML=t.siteText;
+visitText.innerHTML=t.visit;
 
 }
 
@@ -288,13 +304,53 @@ New website is coming soon
 
 
 
+<!-- Website Preview Section -->
+
+<div class="glass rounded-3xl p-5 space-y-4 mt-5">
+
+
+<div class="flex items-center gap-4">
+
+
+<div class="w-14 h-14 rounded-2xl overflow-hidden glass">
+
+<img 
+src="photo_2026-02-12 17.56.23.jpeg"
+class="w-full h-full object-cover"
+/>
+
+</div>
+
+
+<div>
+
+<h2 id="siteTitle" class="font-bold text-lg">
+MKHEYAN AGENCY Website
+</h2>
+
+
+<p id="siteStatus" class="text-white/40 text-xs">
+New website is coming soon
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
 
 <div class="bg-white/5 rounded-2xl p-4 text-center">
 
 
-<p class="text-white/60 text-sm mb-3">
+<p id="siteText" class="text-white/60 text-sm mb-3">
+
 Մեր նոր պրեմիում կայքը շուտով պատրաստ կլինի 🚀
+
 </p>
+
 
 
 <a href="https://mkheyan.agency"
@@ -303,9 +359,16 @@ class="inline-flex items-center gap-2 bg-white text-black px-5 py-3 rounded-xl t
 
 <i data-lucide="globe"></i>
 
-Visit Website
+
+<span id="visitText">
+Այցելել կայք
+</span>
+
 
 </a>
+
+
+</div>
 
 
 </div>
