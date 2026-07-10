@@ -1,79 +1,231 @@
 <!DOCTYPE html>
 <html lang="hy">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mkheyan Agency | Digital vCard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        tailwind.config = { darkMode: 'media' }
-    </script>
-    <style>
-        body { transition: background 0.3s ease; }
-        .glass { 
-            background: rgba(255, 255, 255, 0.05); 
-            backdrop-filter: blur(12px); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-        }
-        @media (prefers-color-scheme: light) {
-            body { background: #f9f9f9; color: #050505; }
-            .glass { background: rgba(0, 0, 0, 0.03); border: 1px solid rgba(0, 0, 0, 0.1); }
-        }
-        @media (prefers-color-scheme: dark) {
-            body { background: #050505; color: #ffffff; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mkheyan Agency | Digital Business Card</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Inter,system-ui,sans-serif;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+background:
+radial-gradient(circle at top,#1b1b1b,#090909 45%,#030303 100%);
+color:#fff;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#ffffff08;
+filter:blur(180px);
+top:-250px;
+left:50%;
+transform:translateX(-50%);
+pointer-events:none;
+}
+
+.card{
+width:100%;
+max-width:420px;
+}
+
+.glass{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.08);
+box-shadow:
+0 15px 40px rgba(0,0,0,.5),
+inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.logo{
+width:120px;
+height:120px;
+border-radius:32px;
+overflow:hidden;
+margin:auto;
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 15px 40px rgba(0,0,0,.5);
+}
+
+.logo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.lang button{
+transition:.3s;
+}
+
+.lang button:hover{
+background:#ffffff12;
+transform:translateY(-2px);
+}
+
+.link{
+transition:.35s;
+}
+
+.link:hover{
+transform:translateY(-3px) scale(1.02);
+background:#ffffff10;
+border-color:#ffffff20;
+}
+
+.link i{
+transition:.35s;
+}
+
+.link:hover i{
+transform:translateX(4px);
+}
+
+.footer{
+color:#777;
+font-size:12px;
+}
+</style>
+
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
 
-    <div class="w-full max-w-sm space-y-6">
-        
-        <!-- Header -->
-        <div class="text-center space-y-2">
-            <div class="w-20 h-20 mx-auto rounded-2xl glass flex items-center justify-center">
-                <i data-lucide="zap" class="w-8 h-8"></i>
-            </div>
-            <h1 class="text-xl font-bold">Vazgen Mkheyan</h1>
-            <p class="text-xs opacity-60 uppercase tracking-widest">Mkheyan Agency</p>
-        </div>
+<body>
 
-        <!-- Links -->
-        <div class="space-y-3">
-            <a href="https://mkheyan.agency" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
-                <span>mkheyan.agency</span>
-                <i data-lucide="globe" class="w-4 h-4"></i>
-            </a>
-            <a href="https://t.me/MkheyanAgencyNews" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
-                <span>@MkheyanAgencyNews</span>
-                <i data-lucide="newspaper" class="w-4 h-4"></i>
-            </a>
-            <a href="https://t.me/MkheyanAgencySupport" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
-                <span>@MkheyanAgencySupport</span>
-                <i data-lucide="message-circle" class="w-4 h-4"></i>
-            </a>
-            <a href="https://wa.me/message/QRM33NSCYND2C1" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
-                <span>WhatsApp</span>
-                <i data-lucide="message-square" class="w-4 h-4"></i>
-            </a>
-            <a href="https://www.instagram.com/mkheyan.agency/" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
-                <span>Instagram</span>
-                <i data-lucide="instagram" class="w-4 h-4"></i>
-            </a>
-            <a href="https://www.threads.com/@mkheyan.agency" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
-                <span>Threads</span>
-                <i data-lucide="at-sign" class="w-4 h-4"></i>
-            </a>
-            <a href="https://www.facebook.com/mkheyan.agency" class="glass p-4 rounded-xl flex items-center justify-between hover:scale-[1.02] transition">
-                <span>Facebook</span>
-                <i data-lucide="facebook" class="w-4 h-4"></i>
-            </a>
-        </div>
+<div class="card space-y-6">
 
-    </div>
+<div class="text-center space-y-4">
 
-    <script>
-        lucide.createIcons();
-    </script>
+<div class="logo">
+<img src="logo.jpg" alt="Mkheyan Agency">
+</div>
+
+<div>
+
+<h1 class="text-2xl font-bold">
+Vazgen Mkheyan
+</h1>
+
+<p class="uppercase tracking-[6px] text-white/60 text-xs mt-2">
+MKHEYAN AGENCY
+</p>
+
+</div>
+
+<div class="lang flex justify-center gap-2">
+
+<button class="glass px-4 py-2 rounded-xl text-sm font-semibold">
+🇦🇲 HY
+</button>
+
+<button class="glass px-4 py-2 rounded-xl text-sm font-semibold">
+🇺🇸 ENG
+</button>
+
+<button class="glass px-4 py-2 rounded-xl text-sm font-semibold">
+🇷🇺 RU
+</button>
+
+</div>
+
+</div>
+
+<div class="space-y-3">
+
+<a href="https://mkheyan.agency"
+class="glass link rounded-2xl p-4 flex justify-between items-center">
+
+<span>Website</span>
+
+<i data-lucide="globe"></i>
+
+</a>
+
+<a href="https://t.me/MkheyanAgencyNews"
+class="glass link rounded-2xl p-4 flex justify-between items-center">
+
+<span>Telegram News</span>
+
+<i data-lucide="newspaper"></i>
+
+</a>
+
+<a href="https://t.me/MkheyanAgencySupport"
+class="glass link rounded-2xl p-4 flex justify-between items-center">
+
+<span>Telegram Support</span>
+
+<i data-lucide="message-circle"></i>
+
+</a>
+
+<a href="https://wa.me/message/QRM33NSCYND2C1"
+class="glass link rounded-2xl p-4 flex justify-between items-center">
+
+<span>WhatsApp</span>
+
+<i data-lucide="message-square"></i>
+
+</a>
+
+<a href="https://www.instagram.com/mkheyan.agency/"
+class="glass link rounded-2xl p-4 flex justify-between items-center">
+
+<span>Instagram</span>
+
+<i data-lucide="instagram"></i>
+
+</a>
+
+<a href="https://www.threads.com/@mkheyan.agency"
+class="glass link rounded-2xl p-4 flex justify-between items-center">
+
+<span>Threads</span>
+
+<i data-lucide="at-sign"></i>
+
+</a>
+
+<a href="https://www.facebook.com/mkheyan.agency"
+class="glass link rounded-2xl p-4 flex justify-between items-center">
+
+<span>Facebook</span>
+
+<i data-lucide="facebook"></i>
+
+</a>
+
+</div>
+
+<div class="footer text-center pt-2">
+
+© 2026 Mkheyan Agency
+
+</div>
+
+</div>
+
+<script>
+lucide.createIcons();
+</script>
+
 </body>
 </html>
