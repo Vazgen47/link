@@ -1,106 +1,330 @@
 <!DOCTYPE html>
 <html lang="hy">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mkheyan Agency | Official Card</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-        body { font-family: 'Inter', sans-serif; background: #050505; color: #fff; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .hover-lift { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .hover-lift:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); }
-        .animate-fade { animation: fadeIn 1s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MKHEYAN AGENCY | Digital Card</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background:#050505;
+    color:white;
+}
+
+.glass {
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.hover-lift {
+    transition:.35s ease;
+}
+
+.hover-lift:hover {
+    transform:translateY(-5px);
+    background:rgba(255,255,255,.08);
+}
+
+.fade {
+    animation:fade 1s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
 
-    <div class="max-w-md w-full space-y-6 animate-fade">
-        <!-- Profile -->
-        <div class="text-center space-y-4">
-            <div class="w-28 h-28 mx-auto rounded-3xl overflow-hidden glass shadow-2xl border border-white/10">
-                <img src="logo.jpg" alt="Logo" class="w-full h-full object-cover">
-            </div>
-            <div>
-                <h1 class="text-2xl font-bold">Vazgen Mkheyan</h1>
-                <p class="text-white/50 uppercase tracking-[4px] text-xs mt-1">Mkheyan Agency</p>
-            </div>
-            <!-- Language Switcher -->
-            <div class="flex justify-center gap-2">
-                <button class="glass px-3 py-1 rounded-lg text-[10px] font-bold">HY</button>
-                <button class="glass px-3 py-1 rounded-lg text-[10px] font-bold">ENG</button>
-                <button class="glass px-3 py-1 rounded-lg text-[10px] font-bold">RU</button>
-            </div>
-        </div>
+<body class="min-h-screen flex items-center justify-center p-5">
 
-        <!-- Contact Links -->
-        <div class="space-y-2">
-            <a href="mailto:mkheyan.agency@gmail.com" class="glass p-3 rounded-2xl flex items-center justify-between hover-lift">
-                <span class="text-sm">Email</span>
-                <i data-lucide="mail" class="w-4 h-4"></i>
-            </a>
-            <a href="tel:+37477430886" class="glass p-3 rounded-2xl flex items-center justify-between hover-lift">
-                <span class="text-sm">Call: 077 43 08 86</span>
-                <i data-lucide="phone" class="w-4 h-4"></i>
-            </a>
-            <a href="tel:+37499430886" class="glass p-3 rounded-2xl flex items-center justify-between hover-lift">
-                <span class="text-sm">Call: 099 43 08 86</span>
-                <i data-lucide="phone" class="w-4 h-4"></i>
-            </a>
-            <div class="glass p-3 rounded-2xl flex items-center justify-between text-emerald-400">
-                <span class="text-sm">Location: Hybrid / Remote</span>
-                <i data-lucide="map-pin" class="w-4 h-4"></i>
-            </div>
-        </div>
 
-        <!-- Social Links -->
-        <div class="grid grid-cols-4 gap-2">
-            <a href="https://mkheyan.agency" class="glass p-3 rounded-2xl flex justify-center hover-lift"><i data-lucide="globe"></i></a>
-            <a href="https://t.me/MkheyanAgencyNews" class="glass p-3 rounded-2xl flex justify-center hover-lift"><i data-lucide="send"></i></a>
-            <a href="https://www.instagram.com/mkheyan.agency/" class="glass p-3 rounded-2xl flex justify-center hover-lift"><i data-lucide="instagram"></i></a>
-            <a href="https://www.facebook.com/mkheyan.agency" class="glass p-3 rounded-2xl flex justify-center hover-lift"><i data-lucide="facebook"></i></a>
-        </div>
+<div class="max-w-md w-full space-y-6 fade">
 
-        <!-- Actions -->
-        <div class="grid grid-cols-2 gap-3">
-            <button onclick="shareCard()" class="bg-white text-black p-3 rounded-2xl font-bold text-sm flex justify-center items-center gap-2 hover:opacity-90">
-                <i data-lucide="share-2" class="w-4 h-4"></i> Share
-            </button>
-            <button onclick="saveContact()" class="glass p-3 rounded-2xl font-bold text-sm flex justify-center items-center gap-2 hover-lift">
-                <i data-lucide="user-plus" class="w-4 h-4"></i> Save
-            </button>
-        </div>
-    </div>
 
-    <script>
-        lucide.createIcons();
+<!-- LOGO / BRAND -->
 
-        function shareCard() {
-            if (navigator.share) {
-                navigator.share({ title: 'Mkheyan Agency', url: window.location.href });
-            }
-        }
+<div class="text-center space-y-5">
 
-        function saveContact() {
-            const vcard = `BEGIN:VCARD
+<div class="w-32 h-32 mx-auto rounded-[35px] overflow-hidden glass shadow-2xl">
+<img 
+src="logo.jpg"
+alt="MKHEYAN AGENCY"
+class="w-full h-full object-cover">
+</div>
+
+
+<div>
+<h1 class="text-3xl font-bold tracking-tight">
+MKHEYAN AGENCY
+</h1>
+
+<p class="text-white/50 text-xs uppercase tracking-[5px] mt-2">
+Digital Creative Agency
+</p>
+</div>
+
+
+<div class="flex justify-center gap-2">
+
+<button class="glass px-4 py-2 rounded-xl text-xs">
+HY
+</button>
+
+<button class="glass px-4 py-2 rounded-xl text-xs">
+ENG
+</button>
+
+<button class="glass px-4 py-2 rounded-xl text-xs">
+RU
+</button>
+
+</div>
+
+</div>
+
+
+
+
+<!-- CONTACT -->
+
+<div class="space-y-3">
+
+
+<a href="mailto:mkheyan.agency@gmail.com"
+class="glass p-4 rounded-2xl flex justify-between items-center hover-lift">
+
+<span>
+mkheyan.agency@gmail.com
+</span>
+
+<i data-lucide="mail"></i>
+
+</a>
+
+
+
+<a href="tel:+37477430886"
+class="glass p-4 rounded-2xl flex justify-between items-center hover-lift">
+
+<span>
++374 77 43 08 86
+</span>
+
+<i data-lucide="phone"></i>
+
+</a>
+
+
+
+<a href="https://mkheyan.agency"
+class="glass p-4 rounded-2xl flex justify-between items-center hover-lift">
+
+<span>
+mkheyan.agency
+</span>
+
+<i data-lucide="globe"></i>
+
+</a>
+
+
+
+<div class="glass p-4 rounded-2xl flex justify-between items-center text-emerald-400">
+
+<span>
+Armenia / Worldwide
+</span>
+
+<i data-lucide="map-pin"></i>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- SOCIAL -->
+
+<div class="grid grid-cols-4 gap-3">
+
+
+<a href="https://mkheyan.agency"
+class="glass p-4 rounded-2xl flex justify-center hover-lift">
+
+<i data-lucide="globe"></i>
+
+</a>
+
+
+
+<a href="https://t.me/MkheyanAgencyNews"
+class="glass p-4 rounded-2xl flex justify-center hover-lift">
+
+<i data-lucide="send"></i>
+
+</a>
+
+
+
+<a href="https://instagram.com/mkheyan.agency"
+class="glass p-4 rounded-2xl flex justify-center hover-lift">
+
+<i data-lucide="instagram"></i>
+
+</a>
+
+
+
+<a href="https://facebook.com/mkheyan.agency"
+class="glass p-4 rounded-2xl flex justify-center hover-lift">
+
+<i data-lucide="facebook"></i>
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+<!-- BUTTONS -->
+
+<div class="grid grid-cols-2 gap-3">
+
+
+<button 
+onclick="shareCard()"
+class="bg-white text-black rounded-2xl p-4 font-bold flex items-center justify-center gap-2">
+
+<i data-lucide="share-2"></i>
+
+Share
+
+</button>
+
+
+
+<button 
+onclick="saveContact()"
+class="glass rounded-2xl p-4 font-bold flex items-center justify-center gap-2 hover-lift">
+
+<i data-lucide="building-2"></i>
+
+Save
+
+</button>
+
+
+</div>
+
+
+
+<div class="text-center text-white/30 text-xs pt-3">
+
+© 2026 MKHEYAN AGENCY
+
+</div>
+
+
+</div>
+
+
+
+
+
+<script>
+
+lucide.createIcons();
+
+
+
+function shareCard(){
+
+if(navigator.share){
+
+navigator.share({
+
+title:"MKHEYAN AGENCY",
+
+text:"Digital Creative Agency",
+
+url:window.location.href
+
+});
+
+}
+
+}
+
+
+
+
+function saveContact(){
+
+
+const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN:Vazgen Mkheyan
-ORG:Mkheyan Agency
-TEL;TYPE=CELL:+37477430886
-TEL;TYPE=CELL:+37499430886
+FN:MKHEYAN AGENCY
+ORG:MKHEYAN AGENCY
+TITLE:Digital Creative Agency
+TEL;TYPE=WORK:+37477430886
 EMAIL:mkheyan.agency@gmail.com
 URL:https://mkheyan.agency
+NOTE:Web Development | Branding | Digital Solutions
 END:VCARD`;
-            const blob = new Blob([vcard], { type: 'text/vcard' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Vazgen_Mkheyan.vcf';
-            a.click();
-        }
-    </script>
+
+
+const blob = new Blob(
+[vcard],
+{
+type:"text/vcard"
+}
+);
+
+
+const url = URL.createObjectURL(blob);
+
+
+const link=document.createElement("a");
+
+link.href=url;
+
+link.download="MKHEYAN_AGENCY.vcf";
+
+link.click();
+
+
+URL.revokeObjectURL(url);
+
+
+}
+
+
+</script>
+
+
 </body>
 </html>
